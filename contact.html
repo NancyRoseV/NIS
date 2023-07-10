@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+  <title>Contact Us</title>
+</head>
+<body>
+  <header>
+     <div class="nav-container"> 
+      <nav class="navbar">
+        <a href="#" class="nav-branding">NIS</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+           <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+   </div>
+  </header>
+  
+<div class="contact-container">
+  <div class="form-container">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+       <div class="line"></div>
+      <h3>Get in touch with us</h3>
+    </div>
+    <div class="cover-image"></div>
+    <form id="contact-form" method="POST" action="#">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="line-gradient"></div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<iframe width="800" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=800&amp;height=400&amp;hl=en&amp;q=9%20Louise%20Street,%20Del%20Judor%20%20Witbank+(NDT%20and%20Inspection%20Solutions%20)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href='https://maps-generator.com/'></a>
+
+
+
+ 
+  
+<footer>
+  <div class="contact-info">
+    <ul>
+      <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></a></li>
+    </ul>
+        <h4>NDT and Inspection Solutions (PTY) LTD</h4>
+    <p>9 Louise Street, Del Judor Proper, Witbank, South Africa</p>
+    <p>+27 72 551 7885 |
++27 72 930 7493 | 
++27 82 211 0402</p>
+    <p> enquiries@ndtisolutions.co.za
+</p>
+  </div>
+   <div class="footer-line"></div>
+  <p class="footer-copyright">
+    &copy; 2023 NDT and Inspection Solutions (PTY) LTD. All rights reserved.
+  </p>
+</footer>
+
+  <script>
+   const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var form = event.target;
+  var button = form.querySelector("button");
+
+  button.disabled = true;
+  button.innerText = "Sending...";
+
+  setTimeout(function() {
+    form.reset();
+    button.disabled = false;
+    button.innerText = "Send Message";
+    alert("Message sent successfully!");
+  }, 2000);
+});
+
+
+  </script>
+</body>
+</html>
