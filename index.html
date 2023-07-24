@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -35,6 +34,15 @@
    </div>
   </header>
   
+  <div id="cookie-notification" class="CookieMessage" style="display: none;">
+  <div class="CookieMessage-content"> 
+    <p>During a visit to our website, cookies may be placed on the hard drive of the user’s computer in order to better adapt the website to the needs of the returning user.
+    By using our site, you acknowledge that you have read and understand our <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.<p>
+    <p><a id="cookie-notification-close" class="CookieMessage-button" href="#">Ok</a></p>
+    
+  </div>
+</div>
+  
   <main>
     <div class="logo-container">
       <div class="logo">
@@ -42,7 +50,7 @@
       </div>
       <div class="content">
         <h1 class="animate-heading">NDT and Inspection Solutions (NIS)</h1>
-        <h3>Delivering Excellence in NDT and Inspection Services</h3>
+        <h3>Delivering Excellence in NDT and Inspection Solutions</h3>
         <div class="buttons">
     <a class="button button-filled" href="services.html">Services</a>
     <a class="button button-bordered" href="contact.html">Contact Us</a>
@@ -59,12 +67,18 @@ Although the focus of NIS inspections are on the following equipment, inspection
     </div>
   </main>
   
+  <div class="hero-image-container">
+      <img src="https://mcusercontent.com/25d7a5aa4fcfd334c6799818d/_thumbs/bcd32e43-11f0-eb67-4402-87e2c73c4038.png" alt="Hero Image">
+    </div>
+
+
+  
 <footer>
   <div class="contact-info">
     <ul>
-      <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100094931912977&mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://instagram.com/ndti.solutions?igshid=NTc4MTIwNjQ2YQ==nancy@gmail.com "><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://www.linkedin.com/company/ndti-solutions/about/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a></a></li>
     </ul>
         <h4>NDT and Inspection Solutions (PTY) LTD</h4>
     <p>9 Louise Street, Del Judor Proper, Witbank, South Africa</p>
@@ -111,7 +125,19 @@ window.addEventListener("scroll", function() {
     paragraphs.classList.add("show");
   }
 });
+if (!localStorage.getItem("cookiesAccepted")) { 
+  var cookieMessage = document.getElementById('cookie-notification');  
+  var closeCookie = document.getElementById('cookie-notification-close');
+  
+  cookieMessage.style.display = 'block';  
+  closeCookie.addEventListener("click", function(e) {  
+    e.preventDefault();
+    localStorage.setItem("cookiesAccepted", true);
+    
+    cookieMessage.style.display = 'none';
+  });
+}
 
   </script>
 </body>
-</html>
+        </html>
