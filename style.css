@@ -336,6 +336,34 @@ h3 {
   transform: translateY(0);
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 300px;
+    height: auto;
+    animation: none;
+  }
+
+  .logo img {
+    filter: drop-shadow(0 0 10px #D3D3D3);
+    animation: none;
+  }
+
+  .content {
+    flex: 1;
+    padding-left: 20px; /* Adjust as needed */
+  }
+}
+
 footer {
   background: #ffffff; /* Gradient background with two colors */
   padding: 20px;
