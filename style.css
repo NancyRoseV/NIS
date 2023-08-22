@@ -364,6 +364,19 @@ h3 {
   }
 }
 
+/* For desktop screens */
+@media screen and (min-width: 1024px) {
+  .hero-image-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-image-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 footer {
   background: #ffffff; /* Gradient background with two colors */
   padding: 20px;
