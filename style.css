@@ -336,26 +336,6 @@ h3 {
   transform: translateY(0);
 }
 
-/* Media query for desktop screens */
-@media (min-width: 1024px) {
-  .main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-  }
-  
-  .logo {
-    position: static; /* Adjust position for desktop layout */
-    width: 300px; /* Adjust width for desktop layout */
-    animation: none; /* Remove logo animation for desktop layout */
-  }
-  
-  .content {
-    margin-top: 0; /* Adjust margin for desktop layout */
-    text-align: left; /* Adjust text alignment for desktop layout */
-  }
-}
 
 /* For desktop screens */
 @media screen and (min-width: 1024px) {
