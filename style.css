@@ -506,7 +506,15 @@ footer {
   }
   .content-box .tab-content p {
   font-size: 5px;
-}
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 12px;
+  }
 
 }
 
